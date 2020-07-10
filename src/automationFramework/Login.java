@@ -15,19 +15,22 @@ public class Login {
 		String email = "dougtest2017";
 		String password = "dougisbest";
 		
+		// Path to Gecko Driver
+		// System.setProperty("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe");
+		
 		// Create a new Firefox webdriver
-		WebDriver driver = new FirefoxDriver();
+		//WebDriver driver = new FirefoxDriver();
 		WebDriver chrome = new ChromeDriver();
 		
 		// Login to gmail
-		login(driver, email, password);
+		//login(driver, email, password);
 		login(chrome, email, password);
 		
 		// Pause 5 sec
 		Thread.sleep(5000);
 		
 		// Quit
-		driver.quit();
+		//driver.quit();
 		chrome.quit();
 
 	}
@@ -41,7 +44,7 @@ public class Login {
 		driver.get("https://mail.google.com");
 		
 		// Enter email
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("Email")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#identifierId")));
 		driver.findElement(By.id("Email")).sendKeys(email);
 		
 		// Click next button

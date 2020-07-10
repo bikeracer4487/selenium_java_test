@@ -13,18 +13,18 @@ public class Open_Email {
 	public static void main(String[] args) throws InterruptedException {
 		
 		// Create a new Firefox webdriver
-		WebDriver foxy = new FirefoxDriver();
+		// WebDriver foxy = new FirefoxDriver();
 		WebDriver chrome = new ChromeDriver();
 		
 		// Run script
-		openemail(foxy);
+		// openemail(foxy);
 		openemail(chrome);
 		
 		// Pause 5 seconds
 		Thread.sleep(5000);
 		
 		// Quit
-		foxy.quit();
+		// foxy.quit();
 		chrome.quit();
 		
 	}
